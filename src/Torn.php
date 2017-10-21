@@ -85,6 +85,40 @@ class Torn
         return $this->send('/market/pointsmarket', ['pointsmarket']);
     }
 
+    /**
+     * @param int   $id
+     * @param array $selections
+     *
+     * @return array
+     */
+    public function getMarket(int $id, array $selections = []): array
+    {
+        return $this->send('/market' . $id, $selections);
+    }
+
+    /**
+     * @return array
+     */
+    public function getAllItems(): array
+    {
+        return $this->send('/torn', ['items']);
+    }
+
+    /**
+     * @param int $itemId
+     *
+     * @return array
+     */
+    public function getItemById(int $itemId): array
+    {
+        $result = $this->send('/torn/' . $itemId, ['items']);
+
+        if (!empty($result['items'][$itemId])) {
+            return $result['items'][$itemId];
+        }
+
+        return [];
+    }
 
     /**
      * @param string $path
