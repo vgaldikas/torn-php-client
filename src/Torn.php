@@ -45,6 +45,17 @@ class Torn
     }
 
     /**
+     * @param int   $id
+     * @param array $selections
+     *
+     * @return array
+     */
+    public function getFaction(int $id, array $selections = []): array
+    {
+        return $this->send('/faction/' . $id, $selections);
+    }
+
+    /**
      * @param string $path
      * @param array  $selections
      *
