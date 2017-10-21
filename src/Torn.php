@@ -56,6 +56,37 @@ class Torn
     }
 
     /**
+     * @param int   $id
+     * @param array $selections
+     *
+     * @return array
+     */
+    public function getProperty(int $id, array $selections = []): array
+    {
+        return $this->send('/property/' . $id, $selections);
+    }
+
+    /**
+     * @param int   $id
+     * @param array $selections
+     *
+     * @return array
+     */
+    public function getCompany(int $id, array $selections = []): array
+    {
+        return $this->send('/company/' . $id, $selections);
+    }
+
+    /**
+     * @return array
+     */
+    public function getPointsMarket()
+    {
+        return $this->send('/market/pointsmarket', ['pointsmarket']);
+    }
+
+
+    /**
      * @param string $path
      * @param array  $selections
      *
