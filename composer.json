@@ -1,0 +1,17 @@
+{
+    "name": "vgaldikas/torn-php-client",
+    "description": "PHP client fom Torn.com HTTP API",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    },
+    "authors": [
+        {
+            "name": "Vytautas Galdikas",
+            "email": "galdikas.vytautas@gmail.com"
+        }
+    ]
+}
