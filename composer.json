@@ -2,6 +2,8 @@
     "name": "vgaldikas/torn-php-client",
     "description": "PHP client fom Torn.com HTTP API",
     "type": "library",
+    "license": "MIT",
+    "keywords": ["http", "torn"],
     "require": {
         "guzzlehttp/guzzle": "^6.3"
     },
@@ -18,5 +20,7 @@
             "name": "Vytautas Galdikas",
             "email": "galdikas.vytautas@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
